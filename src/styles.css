@@ -1,1 +1,10 @@
 /* You can add global styles to this file, and also import other style files */
+.nav-link{
+    color:#fff !important;
+}
+.navbar-brand{
+    color:#fff !important;
+}
+.active-route{
+    color:#000 !important;
+}

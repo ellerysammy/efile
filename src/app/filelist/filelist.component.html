@@ -1,0 +1,38 @@
+<div class="container listaWrapper">
+  <table class="table table-responsive-lg table-striped">
+    <thead class="bg-success">
+      <th>Nombre del Documento</th>
+      <th>Persona Relacionada</th>
+      <th>Referencia 1</th>
+      <th>Referencia 2</th>
+      <th>Tipo</th>
+      <th>Fecha</th>
+    </thead>
+    <tbody>
+      <tr *ngFor="let archivo of archivos">
+        <td>
+          <p [innerHtml] = "archivo.nombre | linkeararchivo : archivo.urlarchivo">
+          </p>
+        </td>
+        <td>
+          {{archivo.nombrerelacionado}}
+        </td>
+        <td>
+          {{archivo.ref1}}
+        </td>
+        <td>
+          {{archivo.ref2}}
+        </td>      
+        <td>
+          {{archivo.tipo}}
+        </td>
+        <td>
+          {{archivo.fechacreacion | date:'dd/MM/yyyy HH:mm'}}
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+
+
